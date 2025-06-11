@@ -3,8 +3,8 @@ import { landing } from "@/lib/content";
 
 export function Hero() {
   return (
-    <section className="px-6 sm:px-10 pt-12 sm:pt-20 pb-16 sm:pb-24">
-      <div className="max-w-6xl mx-auto grid gap-10 sm:gap-14 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+    <section className="py-10 sm:py-16">
+      <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
         <div>
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
             {landing.hero.title}

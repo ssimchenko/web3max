@@ -1,18 +1,24 @@
 import { landing } from "@/lib/content";
+import { ShieldIllustration } from "@/components/landing/icons";
 
 export function KeyRule() {
   return (
-    <section className="px-6 sm:px-10 py-16 sm:py-24 bg-accent text-white">
-      <div className="max-w-4xl mx-auto text-center">
-        <p className="uppercase tracking-widest text-sm text-white/80 mb-4">
-          {landing.keyRule.label}
-        </p>
-        <p className="text-2xl sm:text-3xl font-bold leading-snug">
-          {landing.keyRule.text}
-        </p>
-        <p className="mt-6 text-lg text-white/85 max-w-2xl mx-auto">
-          {landing.keyRule.note}
-        </p>
+    <section className="py-12 sm:py-16 border-t border-ink/10">
+      <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+        <div>
+          <p className="uppercase tracking-widest text-sm text-accent mb-3">
+            {landing.keyRule.label}
+          </p>
+          <p className="text-2xl sm:text-3xl font-bold leading-snug">
+            {landing.keyRule.text}
+          </p>
+          <p className="mt-5 text-lg text-ink-soft max-w-2xl">
+            {landing.keyRule.note}
+          </p>
+        </div>
+        <div className="text-accent justify-self-start lg:justify-self-end">
+          <ShieldIllustration className="w-32 h-32 sm:w-40 sm:h-40" />
+        </div>
       </div>
     </section>
   );
