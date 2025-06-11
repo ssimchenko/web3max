@@ -21,6 +21,7 @@ export function MessengerMockScreen({
       >
         <button
           type="button"
+          tabIndex={-1}
           className="text-xl leading-none"
           aria-label="Назад (имитация)"
         >
@@ -112,11 +113,11 @@ function CodeScreen({
       <p className="text-xs text-ink-soft mb-4">
         Письмо от <span className="font-semibold">{mock.from}</span>
       </p>
-      <div className="flex gap-2 justify-center">
+      <div className="grid grid-cols-6 gap-1.5 sm:gap-2">
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}
-            className="w-10 h-12 rounded-md border-2 flex items-center justify-center text-xl font-bold"
+            className="aspect-[5/6] rounded-md border-2 flex items-center justify-center text-xl font-bold"
             style={{
               borderColor: i === 0 ? brand.primary : "#cbd5e1",
               color: brand.primary,

@@ -278,7 +278,7 @@ function ResumeModal({
     <div
       role="dialog"
       aria-modal="true"
-      className="fixed inset-0 z-50 flex items-center justify-center px-6 bg-ink/40"
+      className="fixed inset-0 z-[80] flex items-center justify-center px-6 bg-ink/40"
     >
       <div className="bg-white rounded-card p-6 sm:p-8 max-w-md w-full shadow-xl animate-fade-in">
         <h2 className="text-xl sm:text-2xl font-bold">
