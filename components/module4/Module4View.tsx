@@ -185,7 +185,10 @@ function Memo({
         </Section>
 
         <div className="mt-12 flex flex-col sm:flex-row gap-3 print:hidden">
-          <Button href="/hub" variant="primary">
+          <Button type="button" variant="primary" onClick={() => window.print()}>
+            {module4.print}
+          </Button>
+          <Button href="/hub" variant="secondary">
             К обучению
           </Button>
           <Button href="/faq" variant="secondary">
