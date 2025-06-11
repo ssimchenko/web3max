@@ -48,3 +48,70 @@ body {
 .animate-fade-in {
   animation: fade-in 280ms ease-out both;
 }
+
+/* ===== Доступность: версия для слабовидящих и незрячих ===== */
+
+/* Размер шрифта — масштабируем корневой rem, всё содержимое растёт пропорционально */
+html[data-a11y-font="large"]  { font-size: 119%; }
+html[data-a11y-font="xlarge"] { font-size: 138%; }
+
+/* Цветовые схемы. Применяем фильтр к корню, чтобы position:fixed
+   (модальные окна, нижняя навигация) позиционировались относительно окна. */
+html[data-a11y-theme="contrast"] { filter: contrast(1.4) saturate(1.15); }
+html[data-a11y-theme="dark"]     { filter: invert(1) hue-rotate(180deg); }
+html[data-a11y-theme="sepia"]    { filter: sepia(0.5) brightness(0.98) contrast(0.95); }
+
+/* В тёмной теме возвращаем нормальный вид картинкам и скриншотам */
+html[data-a11y-theme="dark"] img,
+html[data-a11y-theme="dark"] video {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Интервалы между буквами и строками — только для содержимого, не для панели */
+html[data-a11y-spacing="wide"] .a11y-content {
+  letter-spacing: 0.06em;
+  word-spacing: 0.12em;
+}
+html[data-a11y-spacing="wide"] .a11y-content p,
+html[data-a11y-spacing="wide"] .a11y-content li {
+  line-height: 2 !important;
+}
+
+/* Подсветка ссылок — помогает находить интерактивные элементы */
+html[data-a11y-links="on"] .a11y-content a {
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ===== Печать памятки ===== */
+@media print {
+  /* Сбрасываем фильтры цветовых тем, чтобы печатать в обычном виде */
+  html[data-a11y-theme] {
+    filter: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  main {
+    min-height: 0 !important;
+  }
+
+  /* Карточки секций — без фона и рамок, чтобы экономить чернила */
+  .rounded-card {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-top: 1.25rem !important;
+  }
+
+  @page {
+    margin: 1.5cm;
+  }
+}
