@@ -6,7 +6,7 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'
 
 install: ## Установить зависимости
-	npm ci --frozen-lockfile
+	npm ci
 
 dev: ## Запустить дев-сервер
 	npm run dev
@@ -16,6 +16,9 @@ build: ## Собрать проект локально
 
 start: ## Запустить прод-сборку локально
 	npm run start
+
+lint: ## Проверить типы TypeScript
+	npm run typecheck
 
 docker-build: ## Собрать docker-образ
 	docker build -t $(IMAGE) .
