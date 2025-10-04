@@ -12,6 +12,17 @@
 
 [Design](https://www.figma.com/design/zo1KYvtGjnlnQm4a3cl5n3/Untitled?node-id=0-1&t=PrZQTyByxhpHc3Pp-1)
 
+## Preview
+
+<p align="center">
+  <img src="docs/screenshots/home.png" alt="web3max home page" width="100%" />
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/learning-path.png" alt="web3max learning path" width="49%" />
+  <img src="docs/screenshots/interactive-module.png" alt="web3max interactive learning module" width="49%" />
+</p>
+
 ## About
 
 web3max is an interactive educational website for adults who want practical online-safety guidance without complex technical language. The project turns common threats into short lessons, realistic examples, quizzes, and step-by-step instructions.
