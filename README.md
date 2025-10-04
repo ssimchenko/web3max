@@ -10,7 +10,7 @@
 
 **University team project · Developer & Team Lead: [Alexander Simchenko](https://github.com/ssimchenko)**
 
-[Design](https://www.figma.com/design/zo1KYvtGjnlnQm4a3cl5n3/Untitled?node-id=0-1&t=PrZQTyByxhpHc3Pp-1) · [Project presentation](https://www.figma.com/deck/Op16ZojQaDi72jxcwDBk67/web3max-presentation?node-id=1-660&t=X6x91tMtZRPUx62s-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1)
+[Design](https://www.figma.com/design/zo1KYvtGjnlnQm4a3cl5n3/Untitled?node-id=0-1&t=PrZQTyByxhpHc3Pp-1)
 
 ## About
 
@@ -74,8 +74,6 @@ npm ci
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
-
 For a production build:
 
 ```bash
@@ -88,8 +86,6 @@ npm run start
 ```bash
 docker compose up --build
 ```
-
-The application will be available at [http://localhost:3000](http://localhost:3000).
 
 ## Academic context
 
